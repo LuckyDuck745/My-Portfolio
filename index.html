@@ -1,90 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LuckyDuck745 Portfolio</title>
+    <title>LuckyDuck745 | Portfolio</title>
     <style>
-        body { font-family: sans-serif; background-color: #121212; color: white; text-align: center; padding: 50px; }
-        .card { background: #1e1e1e; border-radius: 10px; padding: 20px; display: inline-block; border: 1px solid #333; max-width: 800px; }
-        h1 { color: #37d67a; }
-        h2 { color: #37d67a; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        a { color: #4285F4; text-decoration: none; font-weight: bold; }
+        :root {
+            --status-color: #37d67a; /* Change to #ff4444 for Offline */
+        }
+        body { font-family: sans-serif; background-color: #121212; color: white; text-align: center; padding: 20px; margin: 0; }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
         
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+        /* Status Section Style */
+        .status-bar { 
+            background: #1e1e1e; 
+            padding: 15px; 
+            border-radius: 10px; 
+            border: 2px solid var(--status-color); 
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        .project-card {
-            background: #252525;
-            border: 1px solid #444;
-            border-radius: 8px;
-            padding: 15px;
-            transition: transform 0.2s;
-            text-align: left;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #37d67a;
-        }
-        .btn {
-            background-color: #37d67a;
-            color: #121212 !important;
-            padding: 12px 24px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-        }
+        .indicator { height: 12px; width: 12px; background-color: var(--status-color); border-radius: 50%; display: inline-block; box-shadow: 0 0 10px var(--status-color); }
+        
+        /* Portfolio Styles */
+        h1 { color: #37d67a; margin-bottom: 5px; }
+        .about-section { text-align: left; background: #1e1e1e; padding: 25px; border-radius: 10px; margin-bottom: 30px; line-height: 1.6; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .project-card { background: #252525; border: 1px solid #444; border-radius: 8px; padding: 15px; text-align: left; transition: 0.3s; }
+        .project-card:hover { border-color: #37d67a; transform: translateY(-5px); }
+        
+        .btn { background-color: #37d67a; color: #121212; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
+        hr { border: 0; border-top: 1px solid #333; margin: 40px 0; }
+        .timestamp { font-size: 0.75em; color: #666; margin-top: 5px; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>Welcome to My Portfolio</h1>
-        
-        <div style="text-align: left; margin: 20px 0; line-height: 1.6;">
-            <h2>About Me</h2>
-            <p>
-                Hi! I'm <strong>LuckyDuck745</strong>. I am a self-taught developer 
-                currently building and learning entirely on <strong>ChromeOS</strong>. 
-                I enjoy turning ideas into reality through code and exploring the 
-                possibilities of the web.Also I Like Ducks
-            </p>
-            <p>
-                Right now, I'm focusing on mastering <strong>HTML, CSS, and GitHub Actions</strong>. 
-                When I'm not coding, you can find me leveling up my GitHub profile 
-                or looking for new projects to add to this portfolio.
-            </p>
-            <a href="mailto:YOUR_EMAIL@gmail.com" class="btn">✉️ mrducky832@outlook.com</a>
+<div class="container">
+    
+    <div class="status-bar">
+        <div>
+            <span class="indicator"></span>
+            <strong>Status:</strong> Online
         </div>
-
-        <hr>
-
-        <h2>My Projects</h2>
-        <div class="gallery">
-            <div class="project-card">
-                <h3>🐍 Profile Snake</h3>
-                <p>A fun animation of my GitHub contributions generated daily.</p>
-                <a href="https://github.com/LuckyDuck745/LuckyDuck745" target="_blank">View Repo →</a>
-            </div>
-
-            <div class="project-card">
-                <h3>🎨 This Portfolio</h3>
-                <p>A mobile-responsive site built on a Chromebook using GitHub Pages.</p>
-                <a href="https://github.com/LuckyDuck745/my-portfolio" target="_blank">View Code →</a>
-            </div>
-
-            <div class="project-card" style="opacity: 0.6;">
-                <h3>🚀 Coming Soon</h3>
-                <p>Working on my next big project. Stay tuned!</p>
-                <span>Under Construction</span>
-            </div>
-        </div>
-
-        <footer style="margin-top: 50px; font-size: 0.8em; color: #666;">
-            <p>Built with ☕ on a Chromebook |  2026 LuckyDuck745</p>
-        </footer>
+        <div>🕹️ <strong>Playing:</strong> Minecraft</div>
+        <div>💻 <strong>Working on:</strong> Web Design</div>
+        <div class="timestamp">Updated: Feb 11, 12:45 PM</div>
     </div>
+
+    <h1>LuckyDuck745</h1>
+    <p style="color: #888; margin-top: 0;">Self-taught Chromebook Developer</p>
+
+    <div class="about-section">
+        <h2>About Me</h2>
+        <p>Hi! I'm a developer building and learning entirely on <strong>ChromeOS</strong>. I enjoy turning ideas into reality through code and exploring the web's possibilities.</p>
+        <p>Focus: HTML, CSS, and GitHub Actions.</p>
+        <a href="mailto:YOUR_EMAIL@gmail.com" class="btn">✉️ mrducky83@outlook.com</a>
+    </div>
+
+    <hr>
+
+    <h2>My Projects</h2>
+    <div class="gallery">
+        <div class="project-card">
+            <h3>🐍 Profile Snake</h3>
+            <p>A fun animation of my GitHub contributions generated daily.</p>
+            <a href="https://github.com/LuckyDuck745/LuckyDuck745" target="_blank" style="color: #4285F4;">View Repo →</a>
+        </div>
+
+        <div class="project-card">
+            <h3>🎨 This Portfolio</h3>
+            <p>My central hub for all my projects and live status updates.</p>
+            <a href="#" style="color: #4285F4;">You are here!</a>
+        </div>
+    </div>
+
+    <footer style="margin-top: 60px; font-size: 0.8em; color: #555;">
+        Built with ☕ on a Chromebook |  2026 LuckyDuck745
+    </footer>
+</div>
 
 </body>
 </html>
